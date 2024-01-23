@@ -13,22 +13,8 @@ function getAllInfo(data) {
         let obj = { name: data.results[i].name, forname: data.results[i].forename };
         list.push(obj);
     }
-
-    const noticeListDiv = document.getElementById('noticeList');
-
-    // Création d'une liste non ordonnée (ul) dans le DOM
-    const ul = document.createElement('ul');
-
-    // Ajout des éléments de la liste à la liste non ordonnée
-    list.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `Name: ${item.name}, Forename: ${item.forname}`;
-        ul.appendChild(li);
-    });
-
-    // Ajoutez la liste non ordonnée à la div
-    noticeListDiv.innerHTML = '';
-    noticeListDiv.appendChild(ul);
+    console.log(list);
+    // disp info
 }
 
 getRedNotices().then((data) => {
@@ -38,10 +24,10 @@ getRedNotices().then((data) => {
 })
 
 function change_page() {
-    const button_next = document.getElementById('button_next');
-    const button_back = document.getElementById('button_back');
+    const next = document.getElementById('buton_next');
+    const back = document.getElementById('buton_back');
 
-    button_next.addEventListener('click', async () => {
+    next.addEventListener('click', () => {
         start++;
         getRedNotices().then((data) => {
             let raw_data = JSON.stringify(data);
@@ -50,7 +36,7 @@ function change_page() {
         })
     })
 
-    button_back.addEventListener('click', async () => {
+    back.addEventListener('click', () => {
         if (start > 1) {
             start--;
             getRedNotices().then((data) => {
@@ -64,4 +50,4 @@ function change_page() {
 
 function show_more() {
 
-}
+};
