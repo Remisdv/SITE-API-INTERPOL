@@ -5,39 +5,45 @@ body {
   position: relative;
 }
 
-body::after {
-  content: "";
-  background: url('path_to_your_image.png');
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;   
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
+/* NAV BAR*/
+
+/* Style the navigation menu */
 .navbar {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  background-color: #333;
-  padding: 2px 0; /* Decrease padding top and bottom */
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
 }
 
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  padding: 0px 5px ;;
+/* Navigation links */
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
 }
 
-.navbar li {
-  padding: 0 20px;
+/* Add a background color on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Style the current/active link */
+.navbar a.active {
+  background-color: #848484;
+}
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left; /* If you want the text to be left-aligned on small screens */
+  }
 }
 
 .navbar a {
@@ -58,5 +64,36 @@ body::after {
   background-color: #333;
   padding: 10px 0; /* Decrease padding top and bottom */
 }
-  
+
+
+/* IMAGE */
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  padding: 30px;
+  text-align: center;
+  color: white;
+
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  width: 40%;
+}
+/* il faut que l'image soit responsive*/
+@media only screen and (max-width: 600px) {
+  .container img {
+    width: 100%;
+    padding-top: 50px;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
 
