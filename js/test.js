@@ -15,6 +15,22 @@ function getAllInfo(data) {
     }
     console.log(list);
     // disp info
+        const noticeListDiv = document.getElementById('noticeList');
+
+    // Création d'une liste non ordonnée (ul) dans le DOM
+    const ul = document.createElement('ul');
+
+    // Ajout des éléments de la liste à la liste non ordonnée
+    list.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `Name: ${item.name}, Forename: ${item.forname}`;
+        ul.appendChild(li);
+    });
+
+    // Ajoutez la liste non ordonnée à la div
+    noticeListDiv.innerHTML = '';
+    noticeListDiv.appendChild(ul);
+
 }
 
 getRedNotices().then((data) => {
