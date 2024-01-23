@@ -97,6 +97,81 @@ body {
 }
 
 
+/* NOUS */
+/* Style pour le conteneur principal */
+.container_parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
 
+/* Style pour chaque conteneur avec image et texte */
+.container_nous {
+  position: relative;
+  width: 50%;
+  margin-right: 50px; /* Espace entre les éléments */
+  margin-top: 50px;
+  flex: 1; /* Les éléments occupent l'espace disponible de manière égale */
+  text-align: center;
+}
 
+/* Style pour les images */
+.image {
+  display: block;
+  width: 100%;
+  max-height: 900px; /* Ajustez la hauteur maximale selon vos besoins */
+  object-fit: cover; /* Assure que l'image conserve ses proportions sans déformation */
+}
 
+/* Style pour le texte sous l'image */
+.description {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 20px; /* Ajout d'espace en dessous */
+  color: white; /* Couleur du texte en blanc */
+}
+
+/* Style pour l'overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #535353;
+}
+
+/* Style au survol pour l'overlay */
+.container_nous:hover .overlay {
+  opacity: 0.7;
+}
+
+/* Style pour le texte dans l'overlay */
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-top: 20px; /* Ajout d'espace en dessous */
+
+}
+
+/* Règle de média-query pour les téléphones */
+@media only screen and (max-width: 600px) {
+  .container_parent {
+    flex-direction: column; /* Alignement en colonne pour les écrans plus étroits */
+  }
+
+  .container_nous {
+    width: 100%;
+    margin-right: 0;
+  }
+}
