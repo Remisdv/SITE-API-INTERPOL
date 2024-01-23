@@ -29,11 +29,13 @@ body {
 /* Add a background color on mouse-over */
 .navbar a:hover {
   background-color: #000;
+  
 }
 
 /* Style the current/active link */
 .navbar a.active {
   background-color: #848484;
+  
 }
 
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
