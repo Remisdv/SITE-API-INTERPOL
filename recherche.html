@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quoicou Remi < Jejman</title>
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\style_recherche.css">
 </head>
 <body>
   <div class="navbar">
@@ -15,10 +15,15 @@
 
 <div class="container">
   <div class="overlay-text">
-    <!-- Your overlay text or other elements here -->
-    Overlay Text
+    
+    <div id="search-container">
+    <input type="text" id="search-input" placeholder="Rechercher...">
+    <button onclick="search()">Rechercher</button>
+    <p id="search-result"></p>
+  </div>
   </div>
 </div>
+<script src="js\recherche.js"></script>
 
 
 </body>
