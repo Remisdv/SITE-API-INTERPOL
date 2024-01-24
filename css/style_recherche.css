@@ -111,4 +111,26 @@ body {
 
 #search-container {
   text-align: center;
+  margin-top: 50px; /* Ajustez la marge supérieure selon vos besoins */
+}
+
+#search-input {
+  padding: 10px; /* Ajustez la taille de la police selon vos besoins */
+  border: 1px solid #ccc; /* Ajoute une bordure pour une apparence plus nette */
+  border-radius: 5px; /* Ajoute des coins arrondis */
+  margin-right: 5px; /* Ajoute un espace entre le champ de recherche et le bouton */
+}
+
+button {
+  padding: 10px; /* Ajustez la taille du bouton selon vos besoins */
+  border: 1px solid #007bff; /* Couleur de la bordure du bouton */
+  background-color: #007bff; /* Couleur d'arrière-plan du bouton */
+  color: #fff; /* Couleur du texte du bouton */
+  border-radius: 5px; /* Ajoute des coins arrondis */
+  cursor: pointer;
+}
+
+#noticeList {
+  text-align: center;
+  margin-top: 20px; /* Ajustez la marge supérieure selon vos besoins */
 }
