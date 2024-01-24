@@ -60,14 +60,25 @@ function getall(list) {
     const noticeListDiv = document.getElementById('noticeList');
     const ul = document.createElement('ul');
     list.forEach(item => {
+        const id = item.entity_id;
+        console.log("id: "+id);
+        getImage(id)
         const li = document.createElement('li');
         li.textContent = `${item.name} ${item.forename} ${item.date_of_birth} ${item.nationalities} ${item.entity_id}`;
         li.setAttribute('id', item.entity_id);
         ul.appendChild(li);
         
     });
+
     noticeListDiv.innerHTML = '';
     noticeListDiv.appendChild(ul);
 
 }
 
+async function getImage(id) {
+    const url = 'https://ws-public.interpol.int/notices/v1/red/2022%2F82960/images';
+    const rep = await fetch(url);
+    const data_img = await rep.json();
+    console.log(data_img);
+    return data_img;
+}
