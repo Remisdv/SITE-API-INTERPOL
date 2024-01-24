@@ -68,35 +68,41 @@ body {
 }
 
 
-/* IMAGE */
-
-/* Container holding the image and the text */
+/* Container holding the background image and overlay elements */
 .container {
   position: relative;
   padding: 30px;
   text-align: center;
   color: white;
-
+  background: url('https://upload.wikimedia.org/wikipedia/en/d/d9/INTERPOL_Logo.svg') center/cover no-repeat; /* Set background image properties */
+  height: 600px; /* Set a specific height for the container */
+  background-size: 40%; /* Set the background size to 66.6667% for 1.5x smaller */
 }
 
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Additional styling for the overlay text */
+}
+
+/* Make the image responsive */
 .container img {
   width: 100%;
   height: auto;
   max-width: 100%;
   width: 40%;
 }
-/* il faut que l'image soit responsive*/
+
+/* Responsive styles for smaller screens */
 @media only screen and (max-width: 600px) {
-  .container img {
-    width: 100%;
-    padding-top: 50px;
-    height: auto;
-    width: 100%;
-    max-width: 100%;
+  .container {
+    height: auto; /* Adjust height for smaller screens */
+    background-size: 100%; /* Adjust background size for smaller screens */
+  }
+
+  .overlay-text {
+    font-size: 14px; /* Adjust font size for smaller screens */
   }
 }
-
-
-
-
-
