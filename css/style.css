@@ -82,7 +82,7 @@ body {
 .overlay-text {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 20%;
   transform: translate(-50%, -50%);
   /* Additional styling for the overlay text */
 }
@@ -96,13 +96,16 @@ body {
 }
 
 /* Responsive styles for smaller screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .container {
-    height: auto; /* Adjust height for smaller screens */
-    background-size: 100%; /* Adjust background size for smaller screens */
+    height: center; /* Adjust height for smaller screens */
+    background-size: 70%; /* Adjust background size for smaller screens */
   }
 
   .overlay-text {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 13px; /* Adjust font size for smaller screens */
+    top: 50%;
+    left: 50%;
   }
 }
+
