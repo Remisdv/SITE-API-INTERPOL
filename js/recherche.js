@@ -53,7 +53,7 @@ function est_dans_la_liste(nom, liste) {
         }
     }
   }
-  // If the name was not found or the list is not defined or not an array, return an empty array
+  // si le nom n'est pas dans la liste, retourner une liste vide
   return { found: false, personneTrouveeListe: [] };
 }
 
