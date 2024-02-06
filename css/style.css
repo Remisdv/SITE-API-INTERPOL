@@ -84,6 +84,7 @@ body {
   top: 50%;
   left: 20%;
   transform: translate(-50%, -50%);
+  margin-top: 1%;
   /* Additional styling for the overlay text */
 }
 
@@ -93,6 +94,13 @@ body {
   height: auto;
   max-width: 100%;
   width: 40%;
+}
+
+.list_click {
+    text-align: center;
+    width: 40%;
+    margin-left: 40vw;
+    margin-top: 5vw;
 }
 
 /* Responsive styles for smaller screens */
@@ -108,4 +116,3 @@ body {
     left: 50%;
   }
 }
-

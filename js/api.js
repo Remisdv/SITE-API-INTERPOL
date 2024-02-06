@@ -20,7 +20,7 @@ function getAllInfo(data) {
 
     list.forEach(item => {
         const li = document.createElement('li');
-        li.textContent = `NOM : ${item.name}`;
+        li.textContent = `${item.name} ${item.forename}`;
         li.setAttribute('id', item.entity_id);
 
         // Ajouter un gestionnaire d'événements au clic de l'élément li
