@@ -49,6 +49,8 @@ function showStoredInfo(entityId) {
 
 
 
+// ...
+
 function displayInfoOnPage(notice) {
     const infoContainer = document.getElementById('infoContainer');
 
@@ -78,6 +80,9 @@ function displayInfoOnPage(notice) {
 
     // Ajouter d'autres éléments selon vos besoins
 }
+
+// ...
+
 
 
 
