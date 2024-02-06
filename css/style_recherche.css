@@ -8,43 +8,41 @@ body {
 
 /* NAV BAR*/
 
-/* Style the navigation menu */
 .navbar {
   width: 100%;
   background-color: #555;
   overflow: auto;
 }
 
-/* Navigation links */
+
 .navbar a {
   float: left;
   padding: 12px;
   color: white;
   text-decoration: none;
   font-size: 17px;
-  width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
-  text-align: center; /* If you want the text to be centered */
+  width: 25%; 
+  text-align: center; 
 }
 
-/* Add a background color on mouse-over */
+
 .navbar a:hover {
   background-color: #000;
   
 }
 
-/* Style the current/active link */
+
 .navbar a.active {
   background-color: #848484;
   
 }
 
-/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
 @media screen and (max-width: 500px) {
   .navbar a {
     float: none;
     display: block;
     width: 100%;
-    text-align: left; /* If you want the text to be left-aligned on small screens */
+    text-align: left; 
   }
 }
 
@@ -64,19 +62,17 @@ body {
   justify-content: center;
   overflow: hidden;
   background-color: #333;
-  padding: 10px 0; /* Decrease padding top and bottom */
+  padding: 10px 0; 
 }
 
-
-/* Container holding the background image and overlay elements */
 .container {
   position: relative;
   padding: 30px;
   text-align: center;
   color: white;
-  background: url('https://upload.wikimedia.org/wikipedia/en/d/d9/INTERPOL_Logo.svg') center/cover no-repeat; /* Set background image properties */
-  height: 600px; /* Set a specific height for the container */
-  background-size: 40%; /* Set the background size to 66.6667% for 1.5x smaller */
+  background: url('https://upload.wikimedia.org/wikipedia/en/d/d9/INTERPOL_Logo.svg') center/cover no-repeat; 
+  height: 600px; 
+  background-size: 40%; 
 }
 
 .overlay-text {
@@ -84,10 +80,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* Additional styling for the overlay text */
 }
 
-/* Make the image responsive */
 .container img {
   width: 100%;
   height: auto;
@@ -95,15 +89,14 @@ body {
   width: 40%;
 }
 
-/* Responsive styles for smaller screens */
 @media only screen and (max-width: 600px) {
   .container {
-    height: center; /* Adjust height for smaller screens */
-    background-size: 70%; /* Adjust background size for smaller screens */
+    height: center; 
+    background-size: 70%; 
   }
 
   .overlay-text {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px; 
   }
 }
 
@@ -111,26 +104,26 @@ body {
 
 #search-container {
   text-align: center;
-  margin-top: 50px; /* Ajustez la marge supérieure selon vos besoins */
+  margin-top: 50px; 
 }
 
 #search-input {
-  padding: 10px; /* Ajustez la taille de la police selon vos besoins */
-  border: 1px solid #ccc; /* Ajoute une bordure pour une apparence plus nette */
-  border-radius: 5px; /* Ajoute des coins arrondis */
-  margin-right: 5px; /* Ajoute un espace entre le champ de recherche et le bouton */
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  margin-right: 5px; 
 }
 
 button {
-  padding: 10px; /* Ajustez la taille du bouton selon vos besoins */
-  border: 1px solid #007bff; /* Couleur de la bordure du bouton */
-  background-color: #007bff; /* Couleur d'arrière-plan du bouton */
-  color: #fff; /* Couleur du texte du bouton */
-  border-radius: 5px; /* Ajoute des coins arrondis */
+  padding: 10px; 
+  border: 1px solid #007bff; 
+  background-color: #007bff; 
+  color: #fff; 
+  border-radius: 5px; 
   cursor: pointer;
 }
 
 #noticeList {
   text-align: center;
-  margin-top: 20px; /* Ajustez la marge supérieure selon vos besoins */
+  margin-top: 20px; 
 }

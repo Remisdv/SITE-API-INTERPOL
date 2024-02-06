@@ -3,8 +3,6 @@ async function search() {
   try {
     const data = await getRedNotices();
     var list = data._embedded.notices;
-
-    // Check if searchTerm is in the list of names
     const searchResult = est_dans_la_liste(searchTerm, list);
     updateSearchResult(searchResult, searchTerm);
   } catch (error) {
@@ -35,7 +33,6 @@ const getRedNotices = async () => {
 
 // Fonction qui vérifie si une personne est dans la liste et renvoie les informations
 function est_dans_la_liste(nom, liste) {
-  // Check if the list is defined and is an array
   if (Array.isArray(liste)) {
     for (let i = 0; i < liste.length; i++) {
         if (liste[i].name == nom) {
@@ -46,8 +43,6 @@ function est_dans_la_liste(nom, liste) {
             personneTrouveeListe.push(liste[i]);
             console.log(personneTrouveeListe)
             getall(personneTrouveeListe);
-            // Ajoutez d'autres propriétés selon vos besoins
-
             // Retourner la nouvelle liste
             return { found: true, personneTrouveeListe };
         }

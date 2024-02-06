@@ -5,46 +5,39 @@ body {
   position: relative;
 }
 
-
 /* NAV BAR*/
-
-/* Style the navigation menu */
 .navbar {
   width: 100%;
   background-color: #555;
   overflow: auto;
 }
 
-/* Navigation links */
 .navbar a {
   float: left;
   padding: 12px;
   color: white;
   text-decoration: none;
   font-size: 17px;
-  width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
-  text-align: center; /* If you want the text to be centered */
+  width: 25%;
+  text-align: center;
 }
 
-/* Add a background color on mouse-over */
 .navbar a:hover {
   background-color: #000;
   
 }
 
-/* Style the current/active link */
 .navbar a.active {
   background-color: #848484;
   
 }
 
-/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
 @media screen and (max-width: 500px) {
   .navbar a {
     float: none;
     display: block;
     width: 100%;
-    text-align: left; /* If you want the text to be left-aligned on small screens */
+    text-align: left;
   }
 }
 
@@ -64,13 +57,11 @@ body {
   justify-content: center;
   overflow: hidden;
   background-color: #333;
-  padding: 10px 0; /* Decrease padding top and bottom */
+  padding: 10px 0; 
 }
-
 
 /* IMAGE */
 
-/* Container holding the image and the text */
 .container {
   position: relative;
   padding: 30px;
@@ -85,7 +76,7 @@ body {
   max-width: 100%;
   width: 40%;
 }
-/* il faut que l'image soit responsive*/
+/*responsive*/
 @media only screen and (max-width: 600px) {
   .container img {
     width: 100%;
@@ -96,8 +87,6 @@ body {
   }
 }
 
-
-/* NOUS */
 /* Style pour le conteneur principal */
 .container_parent {
   display: flex;
@@ -110,9 +99,9 @@ body {
 .container_nous {
   position: relative;
   width: 50%;
-  margin-right: 50px; /* Espace entre les éléments */
+  margin-right: 50px; 
   margin-top: 50px;
-  flex: 1; /* Les éléments occupent l'espace disponible de manière égale */
+  flex: 1; 
   text-align: center;
 }
 
@@ -120,19 +109,19 @@ body {
 .image {
   display: block;
   width: 100%;
-  max-height: 900px; /* Ajustez la hauteur maximale selon vos besoins */
-  object-fit: cover; /* Assure que l'image conserve ses proportions sans déformation */
+  max-height: 900px; 
+  object-fit: cover; 
 }
 
 /* Style pour le texte sous l'image */
 .description {
   font-weight: bold;
   font-size: 16px;
-  margin-top: 20px; /* Ajout d'espace en dessous */
-  color: white; /* Couleur du texte en blanc */
+  margin-top: 20px; 
+  color: white; 
 }
 
-/* Style pour l'overlay */
+
 .overlay {
   position: absolute;
   top: 0;
@@ -146,12 +135,12 @@ body {
   background-color: #535353;
 }
 
-/* Style au survol pour l'overlay */
+
 .container_nous:hover .overlay {
   opacity: 0.7;
 }
 
-/* Style pour le texte dans l'overlay */
+
 .text {
   color: white;
   font-size: 20px;
@@ -160,14 +149,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  margin-top: 20px; /* Ajout d'espace en dessous */
+  margin-top: 20px; 
 
 }
 
-/* Règle de média-query pour les téléphones */
+/* reponsive pour tel*/
 @media only screen and (max-width: 600px) {
   .container_parent {
-    flex-direction: column; /* Alignement en colonne pour les écrans plus étroits */
+    flex-direction: column; 
   }
 
   .container_nous {

@@ -22,8 +22,6 @@ function getAllInfo(data) {
         const li = document.createElement('li');
         li.textContent = `${item.name} ${item.forename}`;
         li.setAttribute('id', item.entity_id);
-
-        // Ajouter un gestionnaire d'événements au clic de l'élément li
         li.addEventListener('click', () => {
             // Récupérer les informations stockées au lieu d'appeler l'API à nouveau
             showStoredInfo(item.entity_id);
@@ -37,7 +35,6 @@ function getAllInfo(data) {
 }
 
 function showStoredInfo(entityId) {
-    // Utiliser les données stockées pour récupérer les informations complémentaires
     const selectedNotice = redNoticesData._embedded.notices.find(item => item.entity_id === entityId);
     if (selectedNotice) {
         // Afficher les informations complémentaires sur la page
@@ -53,8 +50,7 @@ function showStoredInfo(entityId) {
 
 function displayInfoOnPage(notice) {
     const infoContainer = document.getElementById('infoContainer');
-
-    // Créer des éléments pour chaque information et les ajouter au conteneur
+    // Créer des éléments pour chaque information et les ajouter
     const nameElement = document.createElement('p');
     nameElement.textContent = `Nom: ${notice.name}`;
 
@@ -69,23 +65,15 @@ function displayInfoOnPage(notice) {
     thumbnailElement.src = notice._links.thumbnail.href;
     thumbnailElement.alt = "Image de la notice";
 
-    // Effacer le contenu précédent du conteneur
+    // Effacer le contenu 
     infoContainer.innerHTML = '';
 
-    // Ajouter les nouveaux éléments au conteneur
+    // Ajouter les nouveaux éléments
     infoContainer.appendChild(nameElement);
     infoContainer.appendChild(forenameElement);
     infoContainer.appendChild(dobElement);
     infoContainer.appendChild(thumbnailElement);
-
-    // Ajouter d'autres éléments selon vos besoins
 }
-
-// ...
-
-
-
-
 
 function change_page() {
     const next = document.getElementById('button_next');

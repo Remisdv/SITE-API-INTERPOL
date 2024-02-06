@@ -103,15 +103,14 @@ body {
     margin-top: 5vw;
 }
 
-/* Responsive styles for smaller screens */
 @media only screen and (max-width: 800px) {
   .container {
-    height: center; /* Adjust height for smaller screens */
-    background-size: 70%; /* Adjust background size for smaller screens */
+    height: center; 
+    background-size: 70%; 
   }
 
   .overlay-text {
-    font-size: 13px; /* Adjust font size for smaller screens */
+    font-size: 13px; 
     top: 50%;
     left: 50%;
   }
