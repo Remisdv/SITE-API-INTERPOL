@@ -1,5 +1,7 @@
+
 async function search() {
-  var searchTerm = document.getElementById("search-input").value;
+    var searchTerm = document.getElementById("search-input").value;
+    searchTerm = cleanStr(searchTerm);
   try {
     const data = await getRedNotices();
     var list = data._embedded.notices;
@@ -81,8 +83,8 @@ function getall(list) {
         li2.setAttribute('id', item.entity_id);
         ul.appendChild(li2);
         //affiche la nationalité ${item.nationalities}
-        const li3 = document.createElement('li');
-        li3.textContent = `Nationalité : ${item.nationalities}`;
+        const li3 = document.createElement('li');   
+        li3.textContent = `Nationalité : ${get_nat(item.nationalities)}`;
         li3.setAttribute('id', item.entity_id);
         ul.appendChild(li3);
         //affiche l'id ${item.entity_id}
@@ -112,4 +114,12 @@ async function getImage(id) {
     return data_img;
 }
 
-
+function cleanStr(str) {
+    if (str[0] === ' ') {
+        str = str.substring(1);
+    }
+    if (str[str.length - 1] === ' ') {
+        str = str.substring(0, str.length - 1);
+    }
+    return str;
+}
