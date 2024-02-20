@@ -67,6 +67,9 @@ body {
   padding: 10px 0; /* Decrease padding top and bottom */
 }
 
+.select {
+    background-color: #a8a8a8;
+}
 
 /* Container holding the background image and overlay elements */
 .container {
